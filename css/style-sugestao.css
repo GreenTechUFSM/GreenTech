@@ -172,6 +172,7 @@ footer a {
     }
     
     .sugestao-ponto p {
+        font-size: 1.2rem;
         max-width: 100%;
     }
 }
