@@ -11,11 +11,17 @@
 /* Estilos para o corpo da página */
 body {
     font-family: var(--font-family);
-    margin: 0;
+    margin: 0; /* Remove margens padrão */
     padding: 0;
     background: linear-gradient(rgba(255, 255, 255, 1), rgba(244, 244, 244, 1));
     line-height: 1.6;
     font-size: 1rem;
+}
+
+main {
+    flex: 1; /* Faz o main ocupar o espaço restante */
+    min-height: 60vh; /* Define uma altura mínima de 80% da altura da janela */
+    padding: 4rem; /* Espaçamento interno */
 }
 
 /* Estilos para o cabeçalho */
@@ -52,7 +58,6 @@ ul.menu {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 1rem;
 }
 
 ul.menu li a {
@@ -79,15 +84,17 @@ ul.menu li {
 }
 
 .sugestao-ponto h2 {
-    font-size: clamp(2rem, 3vw, 3rem);
+    font-size: clamp(2rem, 5vw, 3rem);
     color: var(--secondary-color);
-    margin-bottom: 1rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
 }
 
 .sugestao-ponto p {
-    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-size: clamp(1rem, 2vw, 1.5rem);
     color: var(--text-color);
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
+    
 }
 
 /* Botão de redirecionamento */
@@ -116,23 +123,26 @@ ul.menu li {
 
 /* Rodapé */
 footer {
-    background-color: var(--primary-color);
-    color: white;
-    text-align: center;
-    padding: 1.5rem 0;
-    font-size: 0.9rem;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    /* Estilização do rodapé */
+    background-color: var(--primary-color); /* Fundo na cor principal */
+    color: white; /* Texto branco */
+    text-align: center; /* Centraliza o conteúdo */
+    padding: 1.5rem 0; /* Espaçamento interno */
+    font-size: 0.9rem; /* Tamanho de fonte responsivo */
+    position: relative; /* Posição relativa para ajustes */
+    bottom: 0; /* Fixa ao final, se necessário */
+    width: 100%; /* Ocupa toda a largura */
 }
 
 footer p {
-    margin: 0.25rem 0;
+    /* Parágrafos no rodapé */
+    margin: 0.25rem 0; /* Margem vertical pequena */
 }
 
 footer a {
-    color: white;
-    text-decoration: underline;
+    /* Links no rodapé */
+    color: white; /* Texto branco */
+    text-decoration: underline; /* Sublinhado */
 }
 
 /* Responsividade */
