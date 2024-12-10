@@ -170,4 +170,8 @@ footer a {
     ul.menu li a {
         font-size: 0.8rem;
     }
+    
+    .sugestao-ponto p {
+        max-width: 100%;
+    }
 }
