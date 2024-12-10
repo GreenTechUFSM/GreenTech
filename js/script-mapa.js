@@ -26,14 +26,6 @@ function criarPopup(nome, empresa, tipoResiduo, diasDescarte, link) {
 // Centraliza as informações em um array para facilitar adições e manutenções
 const pontosDeColeta = [
     {
-        coordenadas: [-30.010008809525285, -52.93962664962294],
-        nome: 'UFSM',
-        empresa: 'Universidade Federal de Santa Maria',
-        tipoResiduo: 'Eletrônico',
-        diasDescarte: 'Dias Úteis',
-        link: 'https://www.ufsm.br/unidades-universitarias/cachoeira-do-sul'
-    },
-    {
         coordenadas: [-30.041729549417536, -52.896775561811694],
         nome: 'Droga Raia',
         empresa: 'SINIR',
