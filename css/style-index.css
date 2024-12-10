@@ -1,0 +1,218 @@
+/* Paleta de cores */
+:root {
+    --primary-color: #17580E; /* Cor principal, usada no cabeçalho e botões */
+    --secondary-color: #17580E; /* Cor secundária, usada no fundo dos botões */
+    --terciary-color: #9EE051;
+    --background-color: #f4f4f4; /* Cor de fundo principal */
+    --text-color: #333; /* Cor do texto */
+    --button-hover: #207B14; /* Cor de fundo do botão ao passar o mouse */
+    --button-secondary-hover: #207B14; /* Cor do fundo do botão secundário ao passar o mouse */
+    --base-font-size: 16px; /* Tamanho base da fonte */
+}
+
+/* Estilo básico */
+body {
+    font-family: 'Trebuchet MS', sans-serif; /* Fonte principal */
+    background-color: var(--background-color); /* Cor de fundo */
+    color: var(--text-color); /* Cor do texto */
+    margin: 0; /* Remove margem */
+    padding: 0; /* Remove padding */
+    font-size: var(--base-font-size); /* Usa o tamanho base */
+    line-height: 1.6; /* Altura das linhas relativa */
+
+}
+
+/* Cabeçalho */
+header {
+    position: relative; /* Fixa o cabeçalho no topo da página */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa toda a largura */
+    z-index: 1100; /* Fica acima da aba lateral */
+    background-color: var(--primary-color); /* Fundo para cobrir a aba */
+    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+    height: 2.5rem; /* Altura proporcional ao texto */
+    line-height: 2.5rem; /* Alinha texto verticalmente */
+    box-sizing: border-box; /* Inclui padding e bordas no cálculo de largura */
+}
+
+nav {
+    display: flex; /* Usa o flexbox para distribuir itens */
+    justify-content: space-between; /* Espaço igual entre os itens */
+    align-items: center; /* Centraliza verticalmente */
+    width: 95%; /* Define a largura */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+.logo h2 {
+    color: white; /* Cor do texto do logo */
+    margin: 0; /* Remove margem */
+    font-size: clamp(1.5rem, 2vw, 2rem); /* Usa clamp para dimensionar dinamicamente */
+}
+
+ul.menu {
+    list-style: none; /* Remove os marcadores da lista */
+    margin: 0; /* Remove margem */
+    padding: 0; /* Remove padding */
+    display: flex; /* Exibe os itens em linha */
+}
+
+ul.menu li {
+    margin-left: 1rem; /* Espaçamento entre os itens do menu */
+}
+
+ul.menu li a {
+    color: white; /* Cor do link */
+    text-decoration: none; /* Remove sublinhado do link */
+    font-size: clamp(1rem, 1.5vw, 1.2rem); /* Usa clamp para tamanho responsivo */
+}
+
+ul.menu li a:hover {
+    text-decoration: underline; /* Sublinha o link ao passar o mouse */
+    color: var(--terciary-color);
+}
+
+/* Botão de menu (menu-toggle) */
+.menu-toggle {
+    display: none; /* Esconde o botão por padrão */
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Seção principal (Hero) */
+.hero {
+    background: linear-gradient(rgba(44, 175, 27, 1), rgba(158, 224, 81, 1)); /* Fundo com gradiente */
+    background-size: cover; /* A imagem cobre toda a área */
+    background-position: center; /* Centraliza a imagem */
+    padding: clamp(4rem, 10vw, 6rem) 5%; /* Espaçamento interno dinâmico */
+    text-align: center; /* Centraliza o texto */
+    color: white; /* Cor do texto */
+}
+
+/* Logo dentro da seção Hero */
+.hero .logo {
+    display: block; /* Exibe como bloco */
+    margin: 1rem auto; /* Espaçamento automático para centralizar */
+    margin-top: 1rem; /* Espaçamento superior */
+    margin-bottom: 5rem; /* Espaçamento inferior */
+    width: 100%; /* Largura flexível */
+    max-width: 40rem; /* Largura máxima */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Botões dentro da seção Hero */
+.hero-buttons .btn {
+    padding: clamp(0.8rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2rem); /* Espaçamento interno dinâmico */
+    font-size: clamp(1rem, 1.5vw, 1.3rem); /* Tamanho da fonte responsivo */
+    color: white; /* Cor do texto */
+    background-color: var(--secondary-color); /* Cor do fundo */
+    border: none; /* Remove a borda */
+    border-radius: 0.3rem; /* Bordas arredondadas */
+    text-decoration: none; /* Remove o sublinhado */
+    margin: 0.5rem 1rem; /* Espaçamento externo */
+    transition: background-color 0.3s ease; /* Transição suave de cor */
+}
+
+.hero-buttons .btn:hover {
+    background-color: var(--button-secondary-hover); /* Cor do botão ao passar o mouse */
+}
+
+.secondary-btn {
+    background-color: var(--primary-color); /* Cor do fundo para o botão secundário */
+}
+
+.secondary-btn:hover {
+    background-color: var(--button-hover); /* Cor do botão secundário ao passar o mouse */
+}
+
+/* Seção de recursos */
+.features {
+    display: flex; /* Usa o flexbox para alinhar os itens */
+    justify-content: space-around; /* Espaço igual entre os itens */
+    flex-wrap: wrap; /* Permite quebra de linha em telas pequenas */
+    padding: clamp(2rem, 5vw, 4rem) 5%; /* Espaçamento interno dinâmico */
+    background-color: var(--background-color); /* Cor de fundo */
+}
+
+.feature-item {
+    width: clamp(80%, 30%, 100%); /* Largura responsiva */
+    text-align: center; /* Centraliza o texto */
+    background-color: white; /* Cor de fundo dos itens */
+    padding: 1.25rem; /* Espaçamento interno */
+    border-radius: 0.5rem; /* Bordas arredondadas */
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* Sombras suaves */
+    margin: 1rem 0; /* Espaçamento vertical entre os itens */
+}
+
+.feature-item h3 {
+    margin-bottom: 0.5rem; /* Espaçamento inferior */
+    font-size: clamp(1.5rem, 2vw, 1.8rem); /* Tamanho da fonte responsivo */
+    color: var(--primary-color); /* Cor do título */
+}
+
+.feature-item p {
+    font-size: clamp(1rem, 1.5vw, 1.3rem); /* Tamanho da fonte responsivo */
+}
+
+/* Rodapé */
+footer {
+    /* Estilização do rodapé */
+    background-color: var(--primary-color); /* Fundo na cor principal */
+    color: white; /* Texto branco */
+    text-align: center; /* Centraliza o conteúdo */
+    padding: 1.5rem 0; /* Espaçamento interno */
+    font-size: 0.9rem; /* Tamanho de fonte responsivo */
+    position: relative; /* Posição relativa para ajustes */
+    bottom: 0; /* Fixa ao final, se necessário */
+    width: 100%; /* Ocupa toda a largura */
+}
+
+footer p {
+    /* Parágrafos no rodapé */
+    margin: 0.25rem 0; /* Margem vertical pequena */
+}
+
+footer a {
+    /* Links no rodapé */
+    color: white; /* Texto branco */
+    text-decoration: underline; /* Sublinhado */
+}
+
+/* Ajustes específicos para telas pequenas */
+@media (max-width: 576px) {
+    header {
+        padding: 0.5rem 1rem;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .logo h2 {
+        font-size: 0.8rem; /* Reduz tamanho da fonte */
+    }
+
+    ul.menu {
+        flex-direction: row; /* Mantém o menu horizontal */
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    ul.menu li a {
+        font-size: 0.8rem; /* Reduz tamanho da fonte */
+    }
+
+    .hero-buttons .btn {
+        padding: 0.6rem 0.8rem; /* Reduz o tamanho dos botões */
+        font-size: 0.9rem; /* Diminui a fonte */
+    }
+
+    .features {
+        flex-direction: column; /* Alinha itens verticalmente em telas pequenas */
+        justify-content: center;
+        align-items: center; /* Garante centralização em telas pequenas */
+        
+    }
+}

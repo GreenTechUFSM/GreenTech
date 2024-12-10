@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres para suportar caracteres especiais em português -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna o site responsivo -->
+    <title>Mapa - GreenTech</title> <!-- Título da página -->
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/style-mapa.css"> <!-- Arquivo CSS principal da página -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" /> <!-- Estilos da biblioteca Leaflet -->
+</head>
+<body>
+    <!-- Cabeçalho com navegação -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h2>GreenTech</h2> <!-- Logo ou título principal do site -->
+            </div>
+            
+            <ul class="menu"> <!-- Menu de navegação -->
+                <li><a href="index.html">Início</a></li> <!-- Link para a página inicial -->
+                <li><a href="cartilha.html">Cartilha</a></li> <!-- Link para a cartilha -->
+                <li><a href="sugestao.html">Sugerir Novo Ponto</a></li> <!-- Link para a página de sugestão -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção do mapa -->
+    <section class="map-section">
+        <div id="map"></div> <!-- Contêiner para o mapa Leaflet -->
+    </section>
+
+    <!-- Barra lateral (inicialmente escondida) -->
+    <div class="sidebar">
+        <h3>Pontos de Coleta</h3>
+        <ul id="pontos-lista">
+            <!-- Lista de pontos será gerada dinamicamente pelo JavaScript -->
+        </ul>
+    </div>
+
+    <!-- Botão de alternância para a barra lateral -->
+    <button class="sidebar-toggle"></button> <!-- Botão de seta para abrir/fechar a barra lateral -->
+
+    <!-- Rodapé -->
+    <footer id="contato">
+        <p>&copy; 2024 GreenTech.</p> <!-- Direitos autorais -->
+        <p>Contato: <a href="mailto:greetechufsm@gmail.com">greetechufsm@gmail.com</a></p> <!-- Link de contato por e-mail -->
+    </footer>
+
+    <!-- Scripts do mapa -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script> <!-- Biblioteca Leaflet -->
+    <script src="js/script-mapa.js"></script> <!-- Arquivo JavaScript principal do mapa -->
+</body>
+</html>

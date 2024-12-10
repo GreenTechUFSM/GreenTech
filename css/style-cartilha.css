@@ -1,0 +1,206 @@
+/* Paleta de cores: Define as cores principais usadas no site */
+:root {
+    --primary-color: #17580E; /* Cor principal (verde escuro) */
+    --secondary-color: #9EE051; /* Cor secundária (verde claro) */
+    --terciary-color: #207B14; /* Cor terciária (verde) */
+    --background-color: #f4f4f4; /* Cor de fundo padrão */
+    --text-color: #333; /* Cor do texto padrão */
+    --base-font-size: 16px; /* Base do tamanho de fonte */
+}
+
+/* Estilo básico do corpo da página */
+body {
+    font-family: 'Trebuchet MS', sans-serif; /* Fonte principal */
+    background-color: var(--background-color); /* Cor de fundo */
+    color: var(--text-color); /* Cor do texto */
+    margin: 0;
+    padding: 0;
+    font-size: 1rem; /* Usa base de 16px */
+
+}
+
+/* Cabeçalho do site */
+header {
+    position: relative; /* Fixa o cabeçalho no topo da página */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa toda a largura */
+    z-index: 1100; /* Fica acima da aba lateral */
+    background-color: var(--primary-color); /* Fundo para cobrir a aba */
+    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+    height: 2.5rem; /* Altura proporcional ao texto */
+    line-height: 2.5rem; /* Alinha texto verticalmente */
+    box-sizing: border-box; /* Inclui padding e bordas no cálculo de largura */
+}
+
+/* Navegação */
+nav {
+    display: flex;
+    justify-content: space-between; /* Espaça os elementos (logo e menu) */
+    align-items: center;
+    width: 95%;
+    margin: 0 auto;
+    max-width: 100%; /* Não deixa ultrapassar */
+}
+
+/* Logo do site */
+.logo h2 {
+    color: white;
+    margin: 0;
+    font-size: clamp(1.5rem, 2vw, 2rem); /* Usa clamp para dimensionar dinamicamente */
+}
+
+/* Menu principal */
+ul.menu {
+    list-style: none; /* Remove os marcadores padrão */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Exibe os itens do menu em linha */
+}
+
+ul.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: clamp(1rem, 1.5vw, 1.2rem); /* Usa clamp para tamanho responsivo */
+    margin-left: 1rem; /* Espaçamento entre itens */
+}
+
+ul.menu li a:hover {
+    text-decoration: underline;
+    color: var(--secondary-color);
+}
+
+/* Botão de download da cartilha */
+.cartilha-download {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.btn-download {
+    display: inline-block;
+    padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2rem);
+    background-color: var(--primary-color);
+    color: white;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    font-weight: 600;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    margin-top: 2rem;
+    transition: background-color 0.3s;
+}
+
+.btn-download:hover {
+    background-color: var(--terciary-color);
+}
+
+/* Seção de introdução da cartilha */
+.cartilha-intro {
+    text-align: center;
+    padding: clamp(2rem, 5vw, 4rem) 5%;
+    background: linear-gradient(rgba(255, 255, 255, 1), rgba(244, 244, 244, 1));
+    color: var(--text-color);
+}
+
+.cartilha-intro h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.cartilha-intro p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    max-width: 50%;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Seção dos cartões de conteúdo */
+.cartilha-conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
+    padding: clamp(2rem, 5vw, 4rem);
+    background-color: var(--background-color);
+}
+
+.card {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border-radius: 0.75rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+    width: clamp(80%, 30%, 25rem);
+    padding: 1.25rem;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.card p {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.5;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Rodapé */
+footer {
+    /* Estilização do rodapé */
+    background-color: var(--primary-color); /* Fundo na cor principal */
+    color: white; /* Texto branco */
+    text-align: center; /* Centraliza o conteúdo */
+    padding: 1.5rem 0; /* Espaçamento interno */
+    font-size: 0.9rem; /* Tamanho de fonte responsivo */
+    position: relative; /* Posição relativa para ajustes */
+    bottom: 0; /* Fixa ao final, se necessário */
+    width: 100%; /* Ocupa toda a largura */
+}
+
+footer p {
+    /* Parágrafos no rodapé */
+    margin: 0.25rem 0; /* Margem vertical pequena */
+}
+
+footer a {
+    /* Links no rodapé */
+    color: white; /* Texto branco */
+    text-decoration: underline; /* Sublinhado */
+}
+
+/* Ajustes específicos para telas pequenas */
+@media (max-width: 576px) {
+    header {
+        padding: 0.5rem 1rem;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .logo h2 {
+        font-size: 0.8rem; /* Reduz tamanho da fonte */
+    }
+
+    ul.menu {
+        flex-direction: row; /* Mantém o menu horizontal */
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    ul.menu li a {
+        font-size: 0.8rem; /* Reduz tamanho da fonte */
+    }
+
+    .cartilha-intro p {
+        font-size: 1.2rem;
+        max-width: 80%;
+    }
+}
