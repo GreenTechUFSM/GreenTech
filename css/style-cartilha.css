@@ -103,7 +103,7 @@ ul.menu li a:hover {
 
 .cartilha-intro h1 {
     font-size: clamp(2rem, 5vw, 3rem);
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 1rem;
 }
 
