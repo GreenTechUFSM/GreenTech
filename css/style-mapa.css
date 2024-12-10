@@ -98,12 +98,14 @@ ul.menu li a:hover {
     top: 50%; /* Centraliza verticalmente */
     right: 0;
     transform: translateY(-50%); /* Ajusta para o centro exato */
-    background-color: transparent;
+    background-color: white;
+    padding: 0.5rem; /* Adiciona um pequeno padding para espaçamento */
     font-size: 2rem; /* Tamanho maior da seta */
     color: #333;
     cursor: pointer;
     border: none;
-    border-radius: 1rem 1rem 1rem 1rem; /* Arredonda o botão */
+    border-radius: 1rem 0rem 0rem 1rem; /* Arredonda o botão */
+    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.2); /* Sombra leve para destaque */
     transition: transform 0.3s ease;
     z-index: 1101; /* Garante que a seta fique acima da barra lateral */
 }
